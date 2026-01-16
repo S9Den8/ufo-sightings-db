@@ -97,39 +97,41 @@ Key Findings (Early Insights)
 README.md  
 requirements.txt  
 
-Environment Setup (Reproducible Workflow)
+**Notes on Shapefiles**
+Shapefiles included in the repository (U.S. states and world boundaries) are used solely to support geospatial plotting; they are not part of the data cleaning pipeline.
+
+#### Environment Setup (Reproducible Workflow)
 
 This project uses a local virtual environment (.venv) created with the Python interpreter provided by a Conda installation. This allows reproducibility while keeping dependencies contained inside the project.
 
 Select the Conda Python Interpreter
-Install Miniconda or Anaconda.
-Ensure Conda provides the interpreter by running:
-python --version
+- Install Miniconda or Anaconda.
+- Ensure Conda provides the interpreter by running:
+- python --version
 
 In VS Code, select the interpreter named:
-conda: ufo (Python 3.11)
+- conda: ufo (Python 3.11)
+- Create the Project Virtual Environment
+- Inside the project folder, create a virtual environment using Conda’s Python:
+- python -m venv .venv
 
-Create the Project Virtual Environment
-Inside the project folder, create a virtual environment using Conda’s Python:
-python -m venv .venv
+1. Activate the virtual environment:
 
-Activate the virtual environment:
-
-Windows PowerShell:
+- Windows PowerShell:
 ..venv\Scripts\activate
 
-macOS / Linux:
+- macOS / Linux:
 source .venv/bin/activate
 
-Install Dependencies
+2. Install Dependencies
 Once the .venv is active, install all required packages:
 pip install -r requirements.txt
 
-Launch Jupyter Notebook
+3. Launch Jupyter Notebook
 With the environment activated:
 jupyter notebook
 
-Open the notebook located at:
+4. Open the notebook located at:
 notebooks/ufo_eda_and_visuals.ipynb
 
 ### Dataset Source
